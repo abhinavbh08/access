@@ -12,7 +12,7 @@ from access.resources.prepare import prepare_wikilarge, prepare_turkcorpus
 if __name__ == '__main__':
     print('Training a model from scratch')
     prepare_wikilarge()
-    # prepare_turkcorpus()
+    prepare_turkcorpus()
     kwargs = {
         'arch': 'transformer',
         'warmup_updates': 4000,
