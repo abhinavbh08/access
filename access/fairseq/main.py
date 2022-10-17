@@ -108,7 +108,7 @@ def check_and_resolve_args(kwargs):
 @print_result
 @print_running_time
 def fairseq_train_and_evaluate(dataset, metrics_coefs=[1, 1, 1], parametrization_budget=64, **kwargs):
-    check_dataset(dataset)
+    # check_dataset(dataset)
     kwargs = check_and_resolve_args(kwargs)
     exp_dir = prepare_exp_dir()
     preprocessors_kwargs = kwargs.get('preprocessors_kwargs', {})

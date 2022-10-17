@@ -24,7 +24,7 @@ if __name__ == '__main__':
         'label_smoothing': 0.54,
         'lr': 0.00011,
         'lr_scheduler': 'fixed',
-        'max_epoch': 48,
+        'max_epoch': 3,
         'max_tokens': 5000,
         'metrics_coefs': [0, 1, 0],
         'optimizer': 'adam',
