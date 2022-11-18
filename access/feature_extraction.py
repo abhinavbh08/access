@@ -48,7 +48,13 @@ def get_lexical_complexity_score(sentence):
 
 
 def get_levenshtein_similarity(complex_sentence, simple_sentence):
-    return Levenshtein.ratio(complex_sentence, simple_sentence)
+    # return Levenshtein.ratio(complex_sentence, simple_sentence)
+    rep_ops = len([_ for operation, _, _ in Levenshtein.editops(complex_sentence, simple_sentence) if operation == 'replace'])
+    max_replace_only_distance = min(len(complex_sentence), len(simple_sentence))
+    dis = 0
+    if max_replace_only_distance != 0:
+        dis = rep_ops/max_replace_only_distance
+    return 1 - dis
 
 
 def get_dependency_tree_depth(sentence):

@@ -24,7 +24,7 @@ if __name__ == '__main__':
         'label_smoothing': 0.54,
         'lr': 0.00011,
         'lr_scheduler': 'fixed',
-        'max_epoch': 3,
+        'max_epoch': 45,
         'max_tokens': 5000,
         'metrics_coefs': [0, 1, 0],
         'optimizer': 'adam',
@@ -33,13 +33,13 @@ if __name__ == '__main__':
                 'target_ratio': 0.9  # Default initial value
             },
             'LevenshteinPreprocessor': {
-                'target_ratio': 0.9  # Default initial value
+                'target_ratio': 0.75  # Default initial value
             },
             'WordRankRatioPreprocessor': {
-                'target_ratio': 0.9  # Default initial value
+                'target_ratio': 0.8  # Default initial value
             },
             'DependencyTreeDepthRatioPreprocessor': {
-                'target_ratio': 0.9  # Default initial value
+                'target_ratio': 0.7  # Default initial value
             },
             'SentencePiecePreprocessor': {
                 'vocab_size': 10000

@@ -25,8 +25,8 @@ from access.resources.paths import (FASTTEXT_EMBEDDINGS_PATH, get_dataset_dir, g
 def prepare_wikilarge():
     dataset = 'wikilarge'
     with create_directory_or_skip(get_dataset_dir(dataset)):
-        # url = 'https://github.com/louismartin/dress-data/raw/master/data-simplification.tar.bz2'
-        url = "https://github.com/abhinavbh08/added-data/raw/master/data-simplification.tar.bz2"
+        url = 'https://github.com/louismartin/dress-data/raw/master/data-simplification.tar.bz2'
+        # url = "https://github.com/abhinavbh08/added-data/raw/master/data-simplification.tar.bz2"
         extracted_path = download_and_extract(url)[0]
         # Only rename files and put them in local directory architecture
         for phase in PHASES:
@@ -49,7 +49,7 @@ def prepare_turkcorpus_lower():
         output_dir = Path(tempfile.mkdtemp())
         git_clone(url, output_dir)
         print(output_dir)
-        print('Processing...')
+        print('Processing... turkcorpus')
         # Only rename files and put them in local directory architecture
         turkcorpus_lower_dir = output_dir / 'data/turkcorpus'
         print(turkcorpus_lower_dir)
