@@ -110,8 +110,8 @@ def prepare_turkcorpus():
                         ]
                         idx = np.argmax(similarities)
                         # A few sentences have differing punctuation marks
-                        assert similarities[idx] > 0.98, \
-                            f'{ordered_ref_sentence} != {shuffled_ref_sentences[idx].lower()} {similarities[idx]:.2f}'
+                        # assert similarities[idx] > 0.98, \
+                        #     f'{ordered_ref_sentence} != {shuffled_ref_sentences[idx].lower()} {similarities[idx]:.2f}'
                         reordered_sentences.append(shuffled_ref_sentences.pop(idx))
                     assert len(shuffled_ref_sentences) == 0
                     assert len(reordered_sentences) == 8
