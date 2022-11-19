@@ -25,8 +25,9 @@ from access.resources.paths import (FASTTEXT_EMBEDDINGS_PATH, get_dataset_dir, g
 def prepare_wikilarge():
     dataset = 'wikilarge'
     with create_directory_or_skip(get_dataset_dir(dataset)):
-        url = 'https://github.com/louismartin/dress-data/raw/master/data-simplification.tar.bz2'
-        # url = "https://github.com/abhinavbh08/added-data/raw/master/data-simplification.tar.bz2"
+        # url = 'https://github.com/louismartin/dress-data/raw/master/data-simplification.tar.bz2'
+        url = "https://github.com/abhinavbh08/added-data/blob/master/data-simplification.tar.bz2"
+        
         extracted_path = download_and_extract(url)[0]
         # Only rename files and put them in local directory architecture
         for phase in PHASES:
