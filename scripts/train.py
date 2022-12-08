@@ -30,13 +30,13 @@ if __name__ == '__main__':
         'optimizer': 'adam',
         'preprocessors_kwargs': {
             'LengthRatioPreprocessor': {
-                'target_ratio': 0.9  # Default initial value
+                'target_ratio': 0.85  # Default initial value
             },
             'LevenshteinPreprocessor': {
                 'target_ratio': 0.75  # Default initial value
             },
             'WordRankRatioPreprocessor': {
-                'target_ratio': 0.8  # Default initial value
+                'target_ratio': 0.75  # Default initial value
             },
             'DependencyTreeDepthRatioPreprocessor': {
                 'target_ratio': 0.7  # Default initial value
