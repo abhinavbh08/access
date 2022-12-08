@@ -42,7 +42,7 @@ if __name__ == '__main__':
                 'target_ratio': 0.7  # Default initial value
             },
             'SentencePiecePreprocessor': {
-                'vocab_size': 10000
+                'vocab_size': 20000
             }
         }
     }
